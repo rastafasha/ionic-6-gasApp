@@ -9,18 +9,75 @@
  * https://ionicframework.com/docs/layout/global-stylesheets
  */
 
+
 /* Core CSS required for Ionic components to work properly */
+
 @import "~@ionic/angular/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
+
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
 @import '~@ionic/angular/css/display.css';
 
 /* Optional CSS utils that can be commented out */
+
 @import "~@ionic/angular/css/padding.css";
 @import "~@ionic/angular/css/float-elements.css";
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+/*fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,600;0,700;0,900;1,200;1,900&display=swap');
+.titulo {
+    font-family: 'Raleway', sans-serif !important;
+    font-size: 26px !important;
+    font-weight: 700;
+    color: cornflowerblue;
+}
+
+.subtitulo {
+    font-family: 'Raleway', sans-serif !important;
+    font-size: 22px !important;
+    font-weight: 400;
+}
+
+.resumen {
+    font-family: 'Raleway', sans-serif !important;
+    font-size: 20px !important;
+    font-weight: 300;
+}
+
+.normal {
+    font-family: 'Raleway', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 300;
+}
+
+.delgada {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.italic-normal {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.top-header {
+    background-color: #999;
+    margin: 30px;
+    border-radius: 18px;
+}
+
+.image {
+    margin: auto;
+    width: 100%;
+    border-radius: 18px;
+}

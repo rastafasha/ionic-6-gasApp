@@ -1,0 +1,42 @@
+.tachado {
+    text-decoration: line-through;
+    text-align: right;
+    margin: 10px;
+    color: red;
+    font-size: 20px;
+}
+
+.precio {
+    text-align: right;
+    margin: 10px;
+    font-size: 22px;
+}
+
+.icon-producto {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 20px;
+    font-size: 30px;
+    background: yellowgreen;
+    padding: 10px;
+    color: white;
+    border-radius: 100px;
+}
+
+.img-productos {}
+
+.comentarios {
+    color: blue !important;
+    background: #dae0e5;
+    width: 150px;
+    text-align: center;
+    margin-left: 10px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.icon {
+    font-size: 20px;
+    margin-bottom: -5px;
+}

@@ -1,3 +1,59 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+    <!--  the side menu  -->
+    <ion-split-pane contentId="main">
+        <ion-menu side="start" menuId="menuPrincipal" contentId="main" class="my-custom-menu">
+            <ion-header>
+                <ion-toolbar color="tertiary">
+                    <ion-title class="subtitulo">Menu</ion-title>
+                </ion-toolbar>
+            </ion-header>
+            <ion-content>
+                <ion-list>
+                    <ion-menu-toggle autoHide="false" routerLink='/'>
+                        <ion-item class="normal">Tienda</ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle *ngIf="admin" autoHide="false" buttton="true" detail="true" routerLink='/config-products'>
+                        <ion-item class="normal">Config Products</ion-item>
+                        <ion-icon slot="start" name="images"></ion-icon>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle *ngIf="admin" autoHide="false" buttton="true" detail="true" routerLink='/pedidos'>
+                        <ion-item class="normal">Pedidos</ion-item>
+                        <ion-icon slot="start" name="archive-outline"></ion-icon>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle autoHide="false" buttton="true" detail="true" routerLink='/perfil'>
+                        <ion-item class="normal">Profile</ion-item>
+                        <ion-icon slot="start" name="person-circle"></ion-icon>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle *ngIf="!admin" autoHide="false" routerLink='/mis-pedidos'>
+                        <ion-item class="normal">Mis Pedidos</ion-item>
+                        <ion-icon slot="start" name="archive-outline"></ion-icon>
+                    </ion-menu-toggle>
+
+                    <ion-menu-toggle autoHide="false" routerLink='/contact'>
+                        <ion-item class="normal">Contactc</ion-item>
+                    </ion-menu-toggle>
+                </ion-list>
+            </ion-content>
+        </ion-menu>
+
+        <!-- <ion-menu side="end" menuId="alterno" contentId="main" class="my-custom-menu">
+            <ion-header>
+                <ion-toolbar color="tertiary">
+                    <ion-title>Alterno Menu</ion-title>
+                </ion-toolbar>
+            </ion-header>
+            <ion-content>
+                <ion-list>
+                    <ion-item>Menu Item</ion-item>
+                    <ion-item>Menu Item</ion-item>
+                    <ion-item>Menu Item</ion-item>
+                    <ion-item>Menu Item</ion-item>
+                    <ion-item>Menu Item</ion-item>
+                </ion-list>
+            </ion-content>
+        </ion-menu> -->
+
+        <!-- the main content -->
+        <ion-router-outlet id="main"></ion-router-outlet>
+    </ion-split-pane>
 </ion-app>

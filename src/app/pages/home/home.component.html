@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title class="subtitulo">
+            Welcome!
+        </ion-title>
+
+        <ion-buttons slot="start">
+            <ion-button (click)="openMenu()">
+                <ion-icon color="primary" slot="icon-only" name="menu"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-button routerLink='/cart'>
+                <ion-icon color="primary" slot="icon-only" name="cart"></ion-icon>
+            </ion-button>
+            <ion-button routerLink='/perfil'>
+                <ion-icon color="primary" slot="icon-only" name="person-circle"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div *ngFor="let producto of products">
+        <app-producto [producto]="producto"></app-producto>
+    </div>
+
+</ion-content>

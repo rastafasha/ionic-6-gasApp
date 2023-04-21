@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title class="subtitulo">
+            Mis Pedidos
+        </ion-title>
+
+        <ion-buttons slot="start">
+            <ion-button (click)="openMenu()">
+                <ion-icon color="primary" slot="icon-only" name="menu"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-button routerLink='/'>
+                <ion-icon color="primary" slot="icon-only" name="storefront"></ion-icon>
+            </ion-button>
+            <ion-button routerLink='/perfil'>
+                <ion-icon color="primary" slot="icon-only" name="person-circle"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="mt-3 p-2">
+
+        <ion-segment mode="ios" (ionChange)="segmentChanged($event)" value="nuevos">
+            <ion-segment-button value="nuevos">
+                <ion-label class="normal">Nuevos</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="culminados">
+                <ion-label class="normal">Culminados</ion-label>
+            </ion-segment-button>
+        </ion-segment>
+
+
+    </div>
+    <ion-card *ngFor="let pedido of pedidos">
+
+        <ion-item>
+            <ion-label class="normal">
+                Estado: {{pedido.estado}}
+                <p>Fecha: {{pedido.fecha.seconds*1000 | date}}</p>
+            </ion-label>
+        </ion-item>
+        <app-itemcart *ngFor="let producto of pedido.productos" [botones]="false" [productoPedido]="producto"></app-itemcart>
+    </ion-card>
+
+
+
+</ion-content>
